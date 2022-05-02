@@ -1,0 +1,26 @@
+    <!-- RIGHT SITE -->
+    <main class="main-right-container">
+        <div>
+          <section class="section">
+            <div class="cont-amount">
+              <div>
+                <h2 class="descr-header">Tip Amount</h2>
+                <p class="amount-para">/ person</p>
+              </div>
+            </div>
+            <h1 class="amount-header">${{calculatedAmount}}</h1>
+          </section>
+          <section class="section">
+            <div class="cont-amount">
+              <div>
+                <h2 class="descr-header">Total</h2>
+                <p class="amount-para">/ person</p>
+              </div>
+            </div>
+            <h1 class="amount-header">${{ calculatedTotalAmount }}</h1>
+          </section>
+        </div>
+        <div *ngIf="wrongAction ? true :null" class="incorrectValueContainer">Incorrect value - Enter Bill Amount First!</div>
+        <button (click)="reset()" n class="btn-reset">Reset</button>
+
+      </main>

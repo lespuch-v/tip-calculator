@@ -1,0 +1,79 @@
+$color-darkGreen: #014040;
+$color-whiteGreen: #d0f2f2;
+$color-cyanGreen: #26bfa3;
+$color-cyanGreenWhite: #a7f2e4;
+$color-lightRed: #bf8275;
+$brdr-radius-small: 10px;
+$big-font-size: 1rem;
+
+@mixin center($flx-direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $flx-direction;
+}
+
+.main-right-container {
+  @include center(column);
+  justify-content: space-between;
+  max-width: 560px;
+  height: 300px;
+  padding: 20px;
+  margin: 20px;
+  background-color: $color-darkGreen;
+  border-radius: $brdr-radius-small;
+}
+.section {
+  @include center(row);
+  margin: 10px;
+  width: 300px;
+}
+.cont-amount {
+  @include center(row);
+  width: 100%;
+  justify-content: space-between;
+}
+.amount-para {
+  margin: 0;
+  color: $color-cyanGreenWhite;
+  font-size: 0.8rem;
+}
+.amount-header {
+  color: $color-cyanGreen;
+  margin: 0;
+  font-size: 3rem;
+}
+.descr-header {
+  color: $color-whiteGreen;
+  margin: 0;
+  font-size: 1rem;
+}
+.btn-reset {
+  background-color: $color-cyanGreenWhite;
+  color: #014040;
+  height: 50px;
+  width: 100%;
+  border-radius: $brdr-radius-small;
+  border: none;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 250ms;
+}
+.btn-reset:hover {
+  transform: scale(1.01);
+}
+.btn-reset:active {
+  transform: scale(1);
+}
+.text-headings {
+  color: $color-darkGreen;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  line-height: 20px;
+}
+.incorrectValueContainer{
+  color: #f0876f;
+  font-weight: bold;
+}
